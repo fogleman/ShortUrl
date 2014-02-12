@@ -46,15 +46,15 @@ and decode_url methods.
 
 Author: Michael Fogleman
 License: MIT
-Link: http://code.activestate.com/recipes/576918/
+Link: https://github.com/fogleman/ShortUrl
 '''
 
-DEFAULT_ALPHABET = 'mn6j2c4rv8bpygw95z7hsdaetxuk3fq'
-DEFAULT_BLOCK_SIZE = 24
+ALPHABET = 'mn6j2c4rv8bpygw95z7hsdaetxuk3fq'
+BLOCK_SIZE = 24
 MIN_LENGTH = 5
 
 class UrlEncoder(object):
-    def __init__(self, alphabet=DEFAULT_ALPHABET, block_size=DEFAULT_BLOCK_SIZE):
+    def __init__(self, alphabet=ALPHABET, block_size=BLOCK_SIZE):
         self.alphabet = alphabet
         self.block_size = block_size
         self.mask = (1 << block_size) - 1
